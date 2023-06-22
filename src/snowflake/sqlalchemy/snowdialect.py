@@ -539,7 +539,7 @@ class SnowflakeDialect(default.DefaultDialect):
                 sa_util.warn(
                     f"Did not recognize type '{coltype}' of column '{column_name}'"
                 )
-                col_type = sqltypes.NULLTYPE
+                col_type = sqltypes.NullType
             else:
                 if issubclass(col_type, FLOAT):
                     col_type_kw["precision"] = numeric_precision
@@ -632,7 +632,7 @@ class SnowflakeDialect(default.DefaultDialect):
                 sa_util.warn(
                     f"Did not recognize type '{coltype}' of column '{column_name}'"
                 )
-                col_type = sqltypes.NULLTYPE
+                col_type = sqltypes.NullType
             else:
                 if issubclass(col_type, FLOAT):
                     col_type_kw["precision"] = numeric_precision
